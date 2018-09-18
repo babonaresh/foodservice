@@ -1,7 +1,8 @@
-C:\Users\nares.DESKTOP-GSUDTC4\PycharmProjects\foodservicePA\myvenv
 *.pyc
 *~
 __pycache__
+myvenv
 db.sqlite3
 /static
 .DS_Store
+
