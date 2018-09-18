@@ -44,25 +44,23 @@ def home(request):
     #return render(request, 'crm/share.html', {'post': post,
      #                                               'form': form,'sent': sent})
 
-class GeneratePdf(View):
-     def get(self, request, *args, **kwargs):
-         template=get_template('crm/index.html')
-         context = {
-             'customer'
-
-         }
-         html = template.render()
-         pdf = render_to_pdf('crm/index.html', )
-         if pdf:
-             response = HttpResponse(pdf, content_type='application/pdf')
-             filename = "Invoice_%s.pdf" %(context)
-             content = "inline; filename='%s'" % (filename)
-             download = request.GET.get("download")
-             if download:
-                 content = "attachment; filename='%s'" % (filename)
-             response['Content-Disposition'] = content
-             return response
-         return HttpResponse("Not found")
+#class GeneratePdf(View):
+#     def get(self, request, *args, **kwargs):
+#       template=get_template('crm/index.html')
+ #        context = {
+  #           'customer'
+#
+ #      pdf = render_to_pdf('crm/index.html', )
+  #       if pdf:
+   #          response = HttpResponse(pdf, content_type='application/pdf')
+    #         filename = "Invoice_%s.pdf" %(context)
+     #        content = "inline; filename='%s'" % (filename)
+      #       download = request.GET.get("download")
+       #      if download:
+        #         content = "attachment; filename='%s'" % (filename)
+         #    response['Content-Disposition'] = content
+          #   return response
+        # return HttpResponse("Not found")
 
 
 
