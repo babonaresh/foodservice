@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from . import views
 from django.urls import path
-from .views import GeneratePdf
+#from .views import GeneratePdf
 app_name = 'crm'
 urlpatterns = [
 
@@ -21,7 +21,7 @@ urlpatterns = [
     path('customer/<int:pk>/summary/', views.summary, name='summary'),
     #url(r'^(?P<post_id>\d+)/share/$', views.post_share,
      #   name='post_share'),
-    url(r'^pdf/$', GeneratePdf.as_view()),
+    #url(r'^pdf/$', GeneratePdf.as_view()),
    # url(r'^accounts/register/$', views.register, name='register'),
 
 ]

@@ -11,7 +11,7 @@ from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
 from django.views.generic import View
-from .utils import render_to_pdf #created in step 4
+#from .utils import render_to_pdf #created in step 4
 from django.template.loader import get_template
 
 
